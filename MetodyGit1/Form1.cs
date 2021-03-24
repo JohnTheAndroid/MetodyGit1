@@ -16,7 +16,12 @@ namespace MetodyGit1
         {
             InitializeComponent();
         }
-       
+
+        //metoda prumer vrati pro 4 realna cisla jejich arit. prumer
+        double prumer(double c1, double c2, double c3)
+        {
+            return (c1 + c2 + c3) / 3;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -33,8 +38,14 @@ namespace MetodyGit1
                 nejstarsi = narozen3;
             }
             MessageBox.Show("Nejstarsi je: " + nejstarsi.ToString("dd MM yyy"));
-            
+            //Vše funguje 
 
+            double c1 = Convert.ToInt32(textBox4.Text.ToString());
+            double c2 = Convert.ToInt32(textBox5.Text.ToString());
+            double c3 = Convert.ToInt32(textBox6.Text.ToString());
+            
+            
+            MessageBox.Show("Prumer je: " + prumer(c1, c2, c3).ToString());
         }
     }
 }
