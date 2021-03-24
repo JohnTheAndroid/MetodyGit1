@@ -16,5 +16,25 @@ namespace MetodyGit1
         {
             InitializeComponent();
         }
+       
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DateTime narozen1 = DateTime.Parse(textBox1.Text);
+            DateTime narozen2 = DateTime.Parse(textBox2.Text);
+            DateTime narozen3 = DateTime.Parse(textBox3.Text);
+            DateTime nejstarsi = narozen1;
+            if (narozen2 < nejstarsi)
+            {
+                nejstarsi = narozen2;
+            }
+            if (narozen3 < nejstarsi)
+            {
+                nejstarsi = narozen3;
+            }
+            MessageBox.Show("Nejstarsi je: " + nejstarsi.ToString("dd MM yyy"));
+            
+
+        }
     }
 }
